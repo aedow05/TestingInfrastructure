@@ -44,5 +44,28 @@
     "createdAt": "2023-12-31T00:00:00.000Z",
     "source": "Groq-AI",
     "flow": "User logs in successfully and reaches dashboard"
+  },
+  {
+    "id": "test_user_login_success",
+    "persona": "Returning User",
+    "description": "User logs in successfully and reaches dashboard",
+    "preconditions": [
+      "User has a valid account",
+      "User has a valid password",
+      "User has a stable internet connection"
+    ],
+    "steps": [
+      "User enters valid username and password",
+      "User clicks the login button",
+      "User is redirected to the dashboard"
+    ],
+    "expectedResults": [
+      "User is logged in successfully",
+      "User is redirected to the dashboard",
+      "User sees the dashboard with all necessary information"
+    ],
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "source": "Groq-AI",
+    "flow": "User logs in successfully and reaches dashboard"
   }
 ]
