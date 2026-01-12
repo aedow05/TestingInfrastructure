@@ -19,4 +19,12 @@
     "@playwright/test": "^1.57.0",
     "@types/node": "^25.0.3"
   }
+  ,
+  "scripts": {
+    "test": "playwright test",
+    "test:report": "playwright show-report",
+    "group:failures": "node scripts/groupFailures.js"
+  }
+
+
 }
