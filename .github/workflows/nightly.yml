@@ -1,0 +1,60 @@
+name: Nightly QA Monitor
+
+on:
+  schedule:
+    - cron: "0 7 * * *"   
+  workflow_dispatch:
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
+      - name: Run Playwright tests
+        run: npx playwright test --reporter=json > test-results.json
+
+      - name: Save history
+        run: node scripts/saveResults.js
+
+      - name: Commit history
+        run: |
+          git config --global user.name "qa-bot"
+          git config --global user.email "bot@github.com"
+          git add qa-history/results.json
+          git commit -m "Nightly QA history update" || echo "No changes"
+          git push
+      
+      - name: Detect flaky tests
+        run: node scripts/detectFlaky.js
+      
+      - name: Generate QA report
+        run: node scripts/generateReport.js
+
+      - name: AI Failure Analysis
+        run: node scripts/aiAnalyze.js
+
+      - name: Commit reports
+        run: |
+          git add QA_REPORT.md FLAKY_REPORT.md AI_ANALYSIS.md
+          git commit -m "QA analysis update" || echo "No changes"
+          git push
+
+
+
+      
+
+

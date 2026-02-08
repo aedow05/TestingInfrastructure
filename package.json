@@ -24,7 +24,9 @@
     "test": "playwright test",
     "test:report": "playwright show-report",
     "group:failures": "node scripts/groupFailures.js",
-    "create:issues": "node scripts/createGithubIssues.js"
+    "create:issues": "node scripts/createGithubIssues.js",
+    "start-app": "node app/server.js"
+
 
   }
   
