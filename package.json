@@ -23,8 +23,11 @@
   "scripts": {
     "test": "playwright test",
     "test:report": "playwright show-report",
-    "group:failures": "node scripts/groupFailures.js"
+    "group:failures": "node scripts/groupFailures.js",
+    "create:issues": "node scripts/createGithubIssues.js"
+
   }
+  
 
 
 }

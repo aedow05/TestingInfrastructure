@@ -5,7 +5,7 @@ const RESULTS_PATH = "test-results/results.json";
 function detectGroup(errorMessage) {
   const msg = errorMessage.toLowerCase();
 
-  // ✅ Connection refused patterns across browsers
+  //  Connection refused patterns across browsers
   if (
     msg.includes("err_connection_refused") ||
     msg.includes("ns_error_connection_refused") ||
@@ -34,7 +34,7 @@ function detectGroup(errorMessage) {
 
 // Load JSON
 if (!fs.existsSync(RESULTS_PATH)) {
-  console.log(`❌ Could not find ${RESULTS_PATH}`);
+  console.log(` Could not find ${RESULTS_PATH}`);
   process.exit(1);
 }
 
