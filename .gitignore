@@ -1,9 +1,43 @@
-.env
-node_modules
+# =========================
+# Node
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# Playwright
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
-/playwright/.auth/
+# Environment variables (SECRETS)
+.env
+
+# OS / Editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# =========================
+# Playwright generated files
+# =========================
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+playwright/.auth/
+playwright/.config/
+
+# Screenshots & traces
+*.png
+*.webm
+*.zip
+
+# =========================
+# QA Monitor user config
+# =========================
+qa.config.json
+
+# =========================
+# Runtime data (keep history out of git)
+# =========================
+qa-history/results.json
+AI_ANALYSIS.md
+FLAKY_REPORT.md
