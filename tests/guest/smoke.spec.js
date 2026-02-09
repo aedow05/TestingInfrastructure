@@ -3,8 +3,14 @@ import { loadQAConfig } from '../helpers/qaConfig.js';
 
 const config = loadQAConfig();
 
-test('App loads successfully', async ({ page }) => {
-  await page.goto(config.baseURL);  
-  // checks that a title exists
-  await expect(page).toHaveTitle(/./);        
+test('site loads successfully', async ({ page }) => {
+  await page.goto(config.baseURL);
+
+  // verify page responded
+  await expect(page).toHaveTitle(/.+/);
+
+  // verify some content exists
+  const body = page.locator('body');
+  await expect(body).toBeVisible();
 });
+

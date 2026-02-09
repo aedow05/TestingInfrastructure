@@ -192,5 +192,102 @@
         ]
       }
     ]
+  },
+  {
+    "date": "2026-02-09T22:22:02.244Z",
+    "stats": {
+      "startTime": "2026-02-09T22:21:57.645Z",
+      "duration": 4448.3099999999995,
+      "expected": 2,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "suites": [
+      {
+        "title": "guest\\smoke.spec.js",
+        "file": "guest/smoke.spec.js",
+        "column": 0,
+        "line": 0,
+        "specs": [
+          {
+            "title": "site loads successfully",
+            "ok": true,
+            "tags": [],
+            "tests": [
+              {
+                "timeout": 30000,
+                "annotations": [],
+                "expectedStatus": "passed",
+                "projectId": "guest",
+                "projectName": "guest",
+                "results": [
+                  {
+                    "workerIndex": 0,
+                    "parallelIndex": 0,
+                    "status": "passed",
+                    "duration": 635,
+                    "errors": [],
+                    "stdout": [],
+                    "stderr": [],
+                    "retry": 0,
+                    "startTime": "2026-02-09T22:21:59.310Z",
+                    "annotations": [],
+                    "attachments": []
+                  }
+                ],
+                "status": "expected"
+              }
+            ],
+            "id": "2c14808d47b386fba9eb-73e6f80875c443a81fc6",
+            "file": "guest/smoke.spec.js",
+            "line": 4,
+            "column": 1
+          }
+        ]
+      },
+      {
+        "title": "user\\e2e-user-flow.spec.js",
+        "file": "user/e2e-user-flow.spec.js",
+        "column": 0,
+        "line": 0,
+        "specs": [
+          {
+            "title": "user can navigate through site",
+            "ok": true,
+            "tags": [],
+            "tests": [
+              {
+                "timeout": 30000,
+                "annotations": [],
+                "expectedStatus": "passed",
+                "projectId": "user",
+                "projectName": "user",
+                "results": [
+                  {
+                    "workerIndex": 1,
+                    "parallelIndex": 1,
+                    "status": "passed",
+                    "duration": 913,
+                    "errors": [],
+                    "stdout": [],
+                    "stderr": [],
+                    "retry": 0,
+                    "startTime": "2026-02-09T22:21:59.306Z",
+                    "annotations": [],
+                    "attachments": []
+                  }
+                ],
+                "status": "expected"
+              }
+            ],
+            "id": "e3baa627b53ea40d046d-b8a2c701284a60fd63b2",
+            "file": "user/e2e-user-flow.spec.js",
+            "line": 4,
+            "column": 1
+          }
+        ]
+      }
+    ]
   }
 ]
