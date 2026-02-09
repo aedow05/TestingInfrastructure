@@ -52,6 +52,17 @@ jobs:
           git add QA_REPORT.md FLAKY_REPORT.md AI_ANALYSIS.md
           git commit -m "QA analysis update" || echo "No changes"
           git push
+      
+      - name: Create QA config
+        run: |
+          if [ ! -f qa.config.json ]; then
+            cp qa.config.example.json qa.config.json
+          fi
+          echo "QA config initialized"
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
 
 
 
